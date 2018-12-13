@@ -1,0 +1,117 @@
+@import '~antd/dist/antd.css';
+
+
+.App {
+  text-align: center;
+  position: relative;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.group {
+  border: 1px solid #666;
+  position: absolute;
+  width: 520px;
+  z-index: 1000;
+  background-color: #fff;
+  border-radius: 6px;
+  &_head {
+    cursor: move;
+    font-size: 15px;
+    padding: 13px 18px 14px 16px;
+    color: #666;
+    border-bottom: 1px solid #e9e9e9;
+    font-weight: bold;
+    &_close {
+      float: right;
+      cursor: pointer;
+    }
+  }
+  &_body {
+    padding: 16px;
+    &>div {
+      margin-bottom: 16px;
+    }
+  }
+  &_footer {
+    padding: 10px 18px 10px 10px;
+    border-top: 1px solid #e9e9e9;
+    text-align: center;
+    &_useAll {
+      margin-right: 20px;
+    }
+  }
+
+  &_useBtn {
+    cursor: pointer;
+    color: #5166b9;
+    float: right!important;
+  }
+  &_photos {
+    position: relative;
+    &_useAllImg {
+      position: absolute!important;
+      right: 0;
+      top: 0;
+      cursor: pointer;
+      color: #5166b9;
+    }
+    &_photo {
+      vertical-align: top;
+      display: inline-block;
+      &_img {
+        width: 130px;
+        height: 110px;
+      }
+      &-use {
+        text-align: center;
+        cursor: pointer;
+        color: #5166b9;
+        display: block;
+      }
+    }
+  }
+}
+.upc {
+  &-item {
+    &-checkGroup {
+      color: #5166b9;
+      cursor: pointer;
+      text-decoration: underline;
+      margin-left: 12px
+    }
+    &-checkGroupDisabled {
+        color: #ccc;
+        cursor: not-allowed;
+        text-decoration: underline;
+        margin-left: 12px
+    }
+  }
+}
